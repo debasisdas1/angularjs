@@ -11,7 +11,6 @@ function LunchController($scope) {
   $scope.userEntry = "";
 
   $scope.checkIfTooMuch = function () {
-    // $scope.message = "Yaakov 1";
     $scope.message = evaluateLunchString($scope.userEntry);
   };
 
@@ -25,16 +24,12 @@ function LunchController($scope) {
   }
 
   function evaluateLunchString(string){
-    console.log(string);
     if(string.length == 0){
       return "Please enter data first";
     }
 
     var lunchItems = string.split(',');
-    console.log(lunchItems);
-    console.log(lunchItems.length);
-    remove(lunchItems,"");
-    console.log(lunchItems.length);
+    remove(lunchItems,""); //Here we are removing the blank elements from the lunchItems array
     if (lunchItems.length <= 3){
       return "Enjoy!";
     }
