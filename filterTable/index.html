@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="TableFilterApp">
+  <head>
+    <title>Table Filter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+    </style>
+  </head>
+<body ng-controller="TableFilterAppController">
+  <input type="text" class="form-control" placeholder="Enter Search Criteria" ng-model="searchQuery">
+  <table>
+    <thead>
+      <tr>
+        <th><a href="#" ng-click="sortType = 'empId'; sortReverse = !sortReverse"> Emp Id </a></th>
+        <th><a href="#" ng-click="sortType = 'firstName'; sortReverse = !sortReverse"> First Name</a></th>
+        <th><a href="#" ng-click="sortType = 'lastName'; sortReverse = !sortReverse"> Last Name </a></th>
+        <th><a href="#" ng-click="sortType = 'emailId'; sortReverse = !sortReverse"> Email Id</a></th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchQuery">
+        <td>{{ employee.empId }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{employee.emailId}}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
