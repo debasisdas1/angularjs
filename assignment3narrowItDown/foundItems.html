@@ -1,0 +1,15 @@
+<div ng-if="list.items.length">
+<h3>Found {{list.items.length}} items for the search term {{ list.myTerm }}</h3>
+<table>
+  <tr ng-repeat = "item in list.items">
+    <td><strong>{{ item.short_name }}</strong></td>
+    <td>{{ item.name }}</td>
+    <td><i>{{ item.description }}</i></td>
+    <td><button ng-click="list.onRemove({index: $index});">Don't want this one!</button></td>
+  </tr>
+
+</table>
+</div>
+<div ng-if="list.myMessage.length">
+<h3>{{ list.myMessage }}</h3>
+</div>
