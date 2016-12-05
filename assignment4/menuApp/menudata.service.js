@@ -1,4 +1,4 @@
-;(function () {
+(function () {
   'use strict'
 
   angular.module('Data')
@@ -39,4 +39,4 @@
       return items /* this a promise */
     }
   }
-})()
+})();

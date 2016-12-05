@@ -1,4 +1,4 @@
-;(function () {
+(function () {
   'use strict'
 
   angular.module('MenuApp')
@@ -11,4 +11,4 @@
     var category = list.filter((item) => { return item.short_name === $stateParams.categoryShortName })
     categoryItems.name = category[0].name
   }
-})()
+})();

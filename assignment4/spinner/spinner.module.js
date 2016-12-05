@@ -1,4 +1,4 @@
-;(function () {
+(function () {
   'use strict'
 
   angular.module('Spinner', [])
@@ -9,4 +9,4 @@
   }).run(function () {
     console.log('Spinner run fired.')
   })
-})()
+})();

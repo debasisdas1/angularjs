@@ -1,4 +1,4 @@
-;(function () {
+(function () {
   'use strict'
 
   angular.module('Data')
@@ -9,4 +9,4 @@
     var categories = this
     categories.list = list
   }
-})()
+})();
